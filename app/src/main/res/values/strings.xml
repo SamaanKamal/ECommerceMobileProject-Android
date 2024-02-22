@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Shop App</string>
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello </string>
+    <string name="title_activity_maps">Map</string>
+</resources>

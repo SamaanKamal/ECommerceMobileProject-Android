@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.UploadProduct">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <ImageView
+        android:id="@+id/product_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/g1"
+        app:layout_constraintWidth_percent="0.4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/proimg"/>
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Product Name"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_image"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Product Price"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_name"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/product_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Product Quantity"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/product_price"
+        tools:layout_editor_absoluteX="20dp" />
+
+    <TextView
+        android:id="@+id/cate_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="16dp"
+        android:padding="10dp"
+        android:text="Category"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_quantity" />
+
+    <Spinner
+       android:id="@+id/category"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       app:layout_constraintTop_toBottomOf="@+id/product_quantity"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toEndOf="@+id/cate_title"
+       app:layout_constraintBaseline_toBaselineOf="@+id/cate_title"
+       android:padding="10dp" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blueColorForLoginWithFaceBook"
+        android:text="Upload "
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/cate_title"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <TextView
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:padding="10dp"
+        android:text="Reset"
+        android:textColor="@color/blueColorForLoginWithFaceBook"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_for_update_del" />
+
+    <Button
+        android:id="@+id/UpdateProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blueColorForLoginWithFaceBook"
+        android:text="Update"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upload"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <Button
+        android:id="@+id/DeleteProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/blueColorForLoginWithFaceBook"
+        android:text="Delete"
+        android:textColor="@color/backgroundOfPromotionCodeOfPaymentInfo"
+        app:layout_constraintTop_toBottomOf="@+id/UpdateProduct"
+        tools:layout_editor_absoluteX="40dp" />
+
+    <EditText
+        android:id="@+id/id_for_update_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter ID"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:text=" Add c"
+        android:textColor="#0C0B0B"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reset" />
+
+    <Button
+        android:id="@+id/generate"
+        android:layout_width="94dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="56dp"
+        android:background="@color/blueColorForLoginWithFaceBook"
+        android:text="Generate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.652"
+
+        app:layout_constraintStart_toEndOf="@+id/id_for_update_del"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
